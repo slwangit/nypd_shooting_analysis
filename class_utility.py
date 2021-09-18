@@ -49,46 +49,6 @@ def clean_dataset(df):
     return df
 
 
-def month_plotting(df):
-    # Exploring month
-    # Group by month
-    month_trend = df.groupby(['year', 'month']).count().reset_index().iloc[:, 0:3].rename(
-        columns={'OCCUR_DATE': 'Shooting Cases'})
-
-    # Plot month trend by year
-    month_plot = px.bar(month_trend, x="month", y="Shooting Cases", color='year', barmode='group')
-    month_plot.update_layout(title='Monthly Shooting Incidents by Year',
-                             xaxis_title='Month',
-                             yaxis_title='Total Incidents')
-
-    month_plot.show()
-
-
-def time_weekday_plotting(df):
-    # Exploring time period and weekday frequency
-    # Group by time period(Only focus on recent 3 years)
-    tmp = df[df['year'].isin([2019, 2020, 2021])]
-    time_trend = tmp.groupby('OCCUR_TIME').count().reset_index().iloc[:, 0:2].rename(
-        columns={'OCCUR_DATE': 'Shooting Cases'})
-
-    # Group by weekday(Only focus on recent 3 years)
-    weekday_trend = tmp.groupby('weekday').count().reset_index().iloc[:, 0:2].rename(
-        columns={'OCCUR_DATE': 'Shooting Cases'})
-
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
-    fig.suptitle('Shooting Frequency in the Recent 3 Years')
-
-    sns.barplot(ax=ax1, x="OCCUR_TIME", y="Shooting Cases", data=time_trend)
-    sns.barplot(ax=ax2, x="weekday", y="Shooting Cases", data=weekday_trend)
-
-    ax1.set(xlabel='Time Period', ylabel='Total Incidents', title='By Time Period')
-    ax2.set(xlabel='Weekday', ylabel='Total Incidents', title='By Weekday')
-
-    fig.subplots_adjust(wspace=0.2)
-
-    plt.show()
-
-
 def encode_split_dataset(df, test_size=0.3, rand_state=42):
     """
     The purpose of the function split_dataset is to conduct feature engineering and split the dataset into training and testing sets.
