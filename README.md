@@ -15,7 +15,9 @@ The code is recommended to be run using Python version 3.*.
 The libraries used:<br>
 * numpy<br>
 * pandas<br>
+* gropandas<br>
 * matplotlib.pyplot<br>
+* plotly<br>
 * seaborn<br>
 * folium<br>
 * scikit learn
@@ -57,7 +59,7 @@ Since interactive maps in the notebook don't work in Github repository, you may 
 for an integrated notebook report rendered by nbviewer.
 
 ## Results
-The main findings and report can be found in `nypd_shooting_analysis.html`
+The main findings and report can be found in `nypd_shooting_analysis.html`.
 
 ## Licensing, Authors, and Acknowledgements<a name="licensing"></a>
 I must give credit to Stack Overflow for the coding part and Medium for the statistical part. 
