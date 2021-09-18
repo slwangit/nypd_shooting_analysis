@@ -1,5 +1,4 @@
 # NYPD Shooting Incidents Analysis
-An EDA and Classification of NYPD Shooting Incidents
 <img src='map.png' width="400"> <img src="month.png" width="400">
 
 ## Table of Contents
