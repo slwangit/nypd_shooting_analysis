@@ -54,12 +54,9 @@ More descriptive information can be found [here](https://data.cityofnewyork.us/P
 There are two `.py` files and one notebook file available here to showcase work related to the above questions. The 2 utility `.py` files are functions deployed for EDA and predictive analysis.
 For the whole workflow, results, and interpretation from a technical view, please refer to the `airbnb_analysis.ipynb`.
 
-#### Results and Report:
-Since interactive maps in the notebook don't work in Github repository, you may refer to `nypd_shooting_analysis.html`
-for an integrated notebook report rendered by nbviewer.
-
 ## Results
-The main findings and report can be found in `nypd_shooting_analysis.html`.
+Since interactive maps in the notebook don't work in Github repository, I rendered the notebook in nbviewer.
+The main findings and report can be found [here](https://nbviewer.jupyter.org/github/slwangit/nypd_shooting_analysis/blob/main/nypd_shooting_analysis.ipynb).
 
 ## Licensing, Authors, and Acknowledgements<a name="licensing"></a>
 I must give credit to Stack Overflow for the coding part and Medium for the statistical part. 
